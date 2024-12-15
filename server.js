@@ -7,8 +7,8 @@ wsServer.on("connection", (socket) => {
     socket.on("message", (message) => {
         console.log(`Получено новое сообщение: ${message}`);
         socket.send(`Эхо: ${message}`);
-    })
-    socket.close("close", () => {
+    });
+    socket.on("close", () => {
         console.log("Соединение закрыто!");
     });
 });
