@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Чат</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<h1>WebSocket Client</h1>
-	<input type="text" id="messageInput" placeholder="Ввудите сообщение">
-	<button id="sendButton">Отправить</button>
-	<div id="message"></div>
+	<div class="chat-container">
+		<div class="username-container" id="usernameContainer">
+			<input type="text" id="usernameInput" placeholder="Введите Ваше имя">
+			<button id="usernameButton">Войти в чат</button>
+		</div>
+
+		<div class="chat-window hidden" id="chatWindow">
+			<div class="chat-layout">
+				<div class="users-list" id="usersList">
+					<h3>Участники чата:</h3>
+					<div id="usersContainer"></div>
+				</div>
+				<div class="chat-main">
+					<div class="messages" id="messages"></div>
+					<div class="input-aria">
+						<input type="text" id="messageInput" placeholder="Введите сообщение">
+						<button id="sendButton">Отправить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="client.js"></script>
 </body>

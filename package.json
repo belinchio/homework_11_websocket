@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "shortid": "^2.2.16",
     "ws": "^8.18.0"
   }
 }
